@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
 /*Стили для первого слайдера */
+
 .slider-first {
     width: 100%;
     min-height: 800px;
@@ -39,12 +42,12 @@ body {
 
 .slider-first__item:nth-child(2) {
     background-color: burlywood;
-    color:  blue;
+    color: blue;
 }
 
 .slider-first__item:nth-child(3) {
     background-color: rgb(129, 120, 109);
-    color:  pink;
+    color: pink;
 }
 
 .slider-first__move {
@@ -64,12 +67,16 @@ body {
 .slider-first__move_right {
     right: 200px;
 }
+
+
 /*Стили второго слайдера */
+
 .slider-second {
     background: blue;
     width: 100%;
     padding: 50px 0;
 }
+
 .slider-second__wrapper {
     position: relative;
     width: 60%;
@@ -81,12 +88,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .slider-second__items {
     height: 600px;
     width: 100%;
     position: relative;
     margin: auto;
 }
+
 .slider-second__item {
     width: 100%;
     height: 600px;
@@ -104,19 +113,21 @@ body {
 
 .slider-second__item:nth-child(2) {
     background-color: burlywood;
-    color:  blue;
+    color: blue;
 }
 
 .slider-second__item:nth-child(3) {
     background-color: rgb(129, 120, 109);
-    color:  pink;
+    color: pink;
 }
+
 .slider-second__buttons {
     width: 400px;
     margin: 25px auto 0;
     display: flex;
     justify-content: space-between;
 }
+
 .slider-second__buttons-item {
     width: 180px;
     background-color: cornflowerblue;
@@ -135,16 +146,82 @@ body {
 }
 
 .slider-second__dots-item {
-width: 17px;
-height: 17px;
-background-color: black;
-border-radius: 50%;
-margin-right: 7px;
+    width: 17px;
+    height: 17px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 7px;
 }
+
 .slider-second__dots-item:last-child() {
     margin-right: 0;
 }
 
 .slider-second__dots-item_active {
     background-color: cornsilk;
+}
+
+
+/* Стили для третьего слайдера */
+
+.slider-third {
+    background: red;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.slider-third__wrapper {
+    width: 60%;
+    margin: 50px auto 0;
+}
+
+.slider-third__track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-third__track-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 33.3%;
+    height: 600px;
+    color: black;
+    font-size: 100px;
+}
+
+.slider-third__track-item:nth-child(1) {
+    background: indigo;
+}
+
+.slider-third__track-item:nth-child(2) {
+    background: rgb(117, 84, 141);
+}
+
+.slider-third__track-item:nth-child(3) {
+    background: rgb(19, 12, 24);
+}
+
+.slider-third__track-item:nth-child(4) {
+    background: rgb(68, 67, 70);
+}
+
+.slider-third__track-item:nth-child(5) {
+    background: rgb(207, 203, 209);
+}
+
+.slider-third__buttons {
+    margin: 50px auto 0;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-third__buttons-item {
+    font-size: 24px;
+    padding: 20px 15px;
+    width: 150px;
+    text-align: center;
 }
