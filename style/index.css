@@ -171,22 +171,22 @@ body {
 }
 
 .slider-third__wrapper {
-    width: 60%;
+    width: 1200px;
     margin: 50px auto 0;
+    overflow: hidden;
 }
 
 .slider-third__track {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    overflow: hidden;
+    transition: 1s;
 }
 
 .slider-third__track-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 33.3%;
     height: 600px;
     color: black;
     font-size: 100px;
@@ -210,6 +210,26 @@ body {
 
 .slider-third__track-item:nth-child(5) {
     background: rgb(207, 203, 209);
+}
+
+.slider-third__track-item:nth-child(6) {
+    background: rgb(149, 209, 9);
+}
+
+.slider-third__track-item:nth-child(7) {
+    background: rgb(148, 151, 141);
+}
+
+.slider-third__track-item:nth-child(8) {
+    background: rgb(209, 9, 9);
+}
+
+.slider-third__track-item:nth-child(9) {
+    background: rgb(152, 175, 98);
+}
+
+.slider-third__track-item:nth-child(10) {
+    background: rgba(91, 112, 41, 0.555);
 }
 
 .slider-third__buttons {

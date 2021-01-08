@@ -56,16 +56,60 @@ function currentSlide(n) {
     showSlides(slideIndex = n)
 }
 
-prev.onclick = function () {
+prev.onclick = function() {
     plusSlides(-1);
 }
-next.onclick = function () {
+next.onclick = function() {
     plusSlides(1);
 }
-dotsArea.onclick = function (e) {
+dotsArea.onclick = function(e) {
     for (let i = 0; i < dots.length + 1; i++) {
         if (e.target.classList.contains('slider-second__dots-item') && e.target == dots[i - 1]) {
             currentSlide(i);
         }
     }
 }
+
+//Код для третьего слайдера 
+
+let sliderThirdSlideToShow = 3;
+let sliderThirdSlideToStep = 3;
+let sliderThirdPositionSlide = 0;
+
+const sliderThirdWrapper = document.querySelector('.slider-third__wrapper');
+const sliderThirdTrack = document.querySelector('.slider-third__track')
+const sliderThirdTrackItems = document.querySelectorAll('.slider-third__track-item');
+const sliderThirdButtonLeft = document.getElementById('slider-third__button-left');
+const sliderThirdButtonRight = document.getElementById('slider-third__button-right');
+const sliderThirdItemsWidth = sliderThirdWrapper.clientWidth / sliderThirdSlideToShow;
+const sliderThirdMovePositionSlide = sliderThirdSlideToStep * sliderThirdItemsWidth;
+
+sliderThirdTrackItems.forEach(item => {
+    item.style.minWidth = `${sliderThirdItemsWidth}px`
+});
+
+sliderThirdButtonRight.onclick = () => {
+    const checkStep = sliderThirdTrackItems.length - (Math.abs(sliderThirdPositionSlide) + sliderThirdSlideToShow * sliderThirdItemsWidth) / sliderThirdItemsWidth;
+    sliderThirdPositionSlide -= checkStep >= sliderThirdSlideToStep ? sliderThirdMovePositionSlide : checkStep * sliderThirdItemsWidth;
+    sliderThirdPosition();
+    checkButtonsSliderThird();
+}
+
+sliderThirdButtonLeft.onclick = () => {
+    const checkStep = Math.abs(sliderThirdPositionSlide) / sliderThirdItemsWidth;
+    sliderThirdPositionSlide += checkStep >= sliderThirdSlideToStep ? sliderThirdMovePositionSlide : checkStep * sliderThirdItemsWidth;
+
+    sliderThirdPosition();
+    checkButtonsSliderThird();
+}
+
+sliderThirdPosition = () => {
+    sliderThirdTrack.style.transform = `translateX(${sliderThirdPositionSlide}px)`;
+}
+
+const checkButtonsSliderThird = () => {
+    sliderThirdButtonLeft.disabled = sliderThirdPositionSlide === 0;
+    sliderThirdButtonRight.disabled = sliderThirdPositionSlide <= -(sliderThirdTrackItems.length - sliderThirdSlideToShow) * sliderThirdItemsWidth
+}
+
+checkButtonsSliderThird();
