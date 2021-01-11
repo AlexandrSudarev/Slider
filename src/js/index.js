@@ -1,4 +1,5 @@
 // Первый слайдер 
+console.log('script start');
 
 let sliderFirstItems = document.querySelectorAll('.slider-first__item');
 let current = 0;
@@ -113,3 +114,5 @@ const checkButtonsSliderThird = () => {
 }
 
 checkButtonsSliderThird();
+
+console.log('script all');

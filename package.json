@@ -7,6 +7,10 @@
         "dev": "webpack serve",
         "build": "webpack --mode production"
     },
+    "browserslist": [
+        "> 1%",
+        "last 3 version"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AlexandrSudarev/Slider.git"
@@ -20,10 +24,21 @@
     "devDependencies": {
         "@babel/core": "^7.12.10",
         "@babel/preset-env": "^7.12.11",
+        "autoprefixer": "^10.2.1",
         "babel-loader": "^8.2.2",
+        "css-loader": "^5.0.1",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.10",
+        "mini-css-extract-plugin": "^1.3.3",
+        "node-sass": "^5.0.0",
         "path": "^0.12.7",
+        "sass-loader": "^10.1.0",
+        "style-loader": "^2.0.0",
         "webpack": "^5.12.2",
         "webpack-cli": "^4.3.1",
         "webpack-dev-server": "^3.11.1"
+    },
+    "dependencies": {
+        "postcss-loader": "^4.1.0"
     }
 }
