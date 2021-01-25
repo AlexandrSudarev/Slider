@@ -39,6 +39,7 @@
         "webpack-dev-server": "^3.11.1"
     },
     "dependencies": {
-        "postcss-loader": "^4.1.0"
+        "postcss-loader": "^4.1.0",
+        "sass": "^1.32.5"
     }
 }
